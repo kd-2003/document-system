@@ -9,7 +9,7 @@ export default defineConfig({
     strictPort: false,
     proxy: {
       '/api': {
-        target: 'https://document-system-5wnk.onrender.com',
+        target: 'http://localhost:3001',
         changeOrigin: true
       }
     }
