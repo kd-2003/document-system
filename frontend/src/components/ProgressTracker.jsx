@@ -7,7 +7,7 @@ const ProgressTracker = ({ jobId, onProgressUpdate }) => {
   const [status, setStatus] = useState('queued');
 
   useEffect(() => {
-    const socket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001');
+    const socket = io(import.meta.env.VITE_BACKEND_URL || 'https://document-system-5wnk.onrender.com');
 
     socket.on('progress', (data) => {
       if (data.jobId === jobId) {
